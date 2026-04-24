@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reylon PortaTrade | Global Logistics & Trading</title>
+<title>Reylon PortaTrade | Global Logistics</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -35,18 +35,19 @@ nav{
     z-index:1000;
 }
 
-/* LOGO */
-.logo{
+/* BRAND */
+.brand{
     display:flex;
     align-items:center;
     gap:10px;
 }
 
-.logo img{
+/* LOGO IMAGE */
+.brand img{
     height:40px;
 }
 
-/* fallback text */
+/* TEXT LOGO fallback */
 #textlogo{
     display:none;
     color:#f5c542;
@@ -122,12 +123,6 @@ nav a:hover{
     padding:25px;
     border-radius:12px;
     border:1px solid rgba(255,255,255,0.05);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#f5c542;
 }
 
 .card h3{
@@ -179,12 +174,16 @@ button{
 
 <!-- NAV -->
 <nav>
-    <div class="logo">
-        <!-- YOUR FIXED LOGO -->
+
+    <div class="brand">
+
+        <!-- LOGO -->
         <img src="logo.png"
         onerror="this.style.display='none'; document.getElementById('textlogo').style.display='block';">
 
+        <!-- TEXT LOGO fallback -->
         <div id="textlogo">REYLON PORTATRADE</div>
+
     </div>
 
     <div>
@@ -193,6 +192,7 @@ button{
         <a href="#about">About</a>
         <a href="#quote">Quote</a>
     </div>
+
 </nav>
 
 <!-- HERO -->
@@ -217,22 +217,22 @@ button{
 
         <div class="card">
             <h3>Sea Freight C&F</h3>
-            <p>Complete ocean freight with customs clearance and global logistics coordination.</p>
+            <p>Complete ocean freight with customs clearance and global logistics handling.</p>
         </div>
 
         <div class="card">
             <h3>Air Freight C&F</h3>
-            <p>Fast international air cargo handling with full forwarding support.</p>
+            <p>Fast international air cargo with full forwarding support.</p>
         </div>
 
         <div class="card">
             <h3>Import Services</h3>
-            <p>We source and import goods including vegetables, commodities, and industrial products.</p>
+            <p>We source and import goods including vegetables, commodities, and industrial cargo.</p>
         </div>
 
         <div class="card">
             <h3>Export Services</h3>
-            <p>Full export logistics including documentation, shipping, and delivery management.</p>
+            <p>End-to-end export logistics with documentation and global delivery.</p>
         </div>
 
     </div>
@@ -243,8 +243,7 @@ button{
     <h2 class="title">About Us</h2>
     <p style="color:#ccc;max-width:900px;">
         Reylon PortaTrade is a global logistics and trading company specializing in clearing,
-        forwarding, import and export solutions. We provide reliable international supply chain services
-        for businesses worldwide.
+        forwarding, import and export solutions. We provide reliable and professional supply chain services worldwide.
     </p>
 </section>
 
