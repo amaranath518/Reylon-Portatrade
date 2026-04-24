@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reylon Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#0a0f1c;
+    color:white;
+}
+
+header {
+    padding:20px;
+    background:#111a2e;
+    text-align:center;
+    color:#f5c542;
+}
+
+.container {
+    padding:20px;
+}
+
+.card {
+    background:#111a2e;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+button {
+    background:#f5c542;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+input {
+    padding:10px;
+    width:100%;
+    margin:5px 0;
+    background:#0b1224;
+    border:none;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>REYLON PORTATRADE - ADMIN DASHBOARD</h2>
+</header>
+
+<div class="container">
+
+<h3>📦 Add New Shipment Lead (Test)</h3>
+
+<input id="name" placeholder="Customer Name">
+<input id="email" placeholder="Email">
+<input id="service" placeholder="Service Type (Sea/Air/Import/Export)">
+<input id="message" placeholder="Cargo Details">
+
+<button onclick="saveData()">Save Lead</button>
+
+<h3 style="margin-top:30px;">📊 All Leads</h3>
+
+<div id="leads"></div>
+
+</div>
+
+<script>
+// Save lead
+function saveData() {
+
+    let data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        service: document.getElementById("service").value,
+        message: document.getElementById("message").value,
+        time: new Date().toLocaleString()
+    };
+
+    let leads = JSON.parse(localStorage.getItem("leads")) || [];
+    leads.push(data);
+    localStorage.setItem("leads", JSON.stringify(leads));
+
+    alert("Lead saved!");
+    loadLeads();
+}
+
+// Load leads
+function loadLeads() {
+    let leads = JSON.parse(localStorage.getItem("leads")) || [];
+    let container = document.getElementById("leads");
+
+    container.innerHTML = "";
+
+    leads.forEach((l, index) => {
+        container.innerHTML += `
+        <div class="card">
+            <b>${l.name}</b><br>
+            ${l.email}<br>
+            ${l.service}<br>
+            ${l.message}<br>
+            <small>${l.time}</small>
+        </div>`;
+    });
+}
+
+loadLeads();
+</script>
+
+</body>
+</html>
