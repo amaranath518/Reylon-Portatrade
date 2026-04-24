@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reylon PortaTrade | Global Logistics</title>
+<title>Reylon PortaTrade | Global Logistics & Trading</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -29,33 +29,18 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:15px 60px;
-    background:rgba(10,15,28,0.95);
+    background:rgba(10,15,28,0.85);
     backdrop-filter:blur(12px);
     border-bottom:1px solid rgba(255,255,255,0.08);
     z-index:1000;
 }
 
-/* BRAND AREA */
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.brand img{
-    height:42px;
-}
-
-/* COMPANY NAME ALWAYS VISIBLE */
-.brand-name{
+nav h1{
     color:#f5c542;
-    font-weight:700;
     font-size:16px;
     letter-spacing:1px;
-    white-space:nowrap;
 }
 
-/* NAV LINKS */
 nav a{
     color:#ccc;
     margin-left:20px;
@@ -80,8 +65,8 @@ nav a:hover{
     background-position:center;
 }
 
-.hero h1{
-    font-size:56px;
+.hero h2{
+    font-size:58px;
     color:#f5c542;
     max-width:700px;
 }
@@ -124,9 +109,15 @@ nav a:hover{
     padding:25px;
     border-radius:12px;
     border:1px solid rgba(255,255,255,0.05);
+    transition:0.3s;
 }
 
-.card h3{
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#f5c542;
+}
+
+.card h4{
     color:#f5c542;
     margin-bottom:10px;
 }
@@ -143,8 +134,8 @@ input,select,textarea{
 }
 
 button{
-    width:100%;
     padding:12px;
+    width:100%;
     background:#f5c542;
     border:none;
     font-weight:600;
@@ -164,8 +155,8 @@ button{
     background:#25D366;
     padding:14px 16px;
     border-radius:50px;
-    color:white;
     text-decoration:none;
+    color:white;
     font-weight:600;
 }
 </style>
@@ -175,15 +166,9 @@ button{
 
 <!-- NAV -->
 <nav>
-
-    <div class="brand">
-
-        <img src="logo.png" alt="Reylon Logo">
-
-        <div class="brand-name">
-            REYLON PORTATRADE
-        </div>
-
+    <div style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.png" style="height:40px;">
+        <h1>REYLON PORTATRADE</h1>
     </div>
 
     <div>
@@ -192,47 +177,47 @@ button{
         <a href="#about">About</a>
         <a href="#quote">Quote</a>
     </div>
-
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div>
-        <h1>Global Clearing & Forwarding Solutions</h1>
+        <h2>Global Clearing & Forwarding Solutions</h2>
         <p>
-            Sea Freight • Air Freight • Import & Export Trade Solutions Worldwide
+            End-to-end logistics solutions across Sea Freight, Air Freight, Customs Clearance,
+            Import & Export Trade Management worldwide.
         </p>
 
         <button onclick="document.getElementById('quote').scrollIntoView()">
-            Request Quote
+            Request a Quote
         </button>
     </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section" id="services">
-    <h2 class="title">Our Services</h2>
+    <h2 class="title">Enterprise Logistics Services</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h3>Sea Freight C&F</h3>
-            <p>Complete ocean freight with customs clearance and global shipping coordination.</p>
+            <h4>Sea Freight (C&F)</h4>
+            <p>Complete ocean freight solutions including customs clearance, documentation, and global shipping coordination.</p>
         </div>
 
         <div class="card">
-            <h3>Air Freight C&F</h3>
-            <p>Fast international air cargo handling with full forwarding support.</p>
+            <h4>Air Freight (C&F)</h4>
+            <p>Fast international air cargo services with full forwarding and customs handling support.</p>
         </div>
 
         <div class="card">
-            <h3>Import Services</h3>
-            <p>We source and import goods including vegetables, commodities, and industrial cargo.</p>
+            <h4>Import Solutions</h4>
+            <p>We source and import goods globally including vegetables, commodities, and industrial products.</p>
         </div>
 
         <div class="card">
-            <h3>Export Services</h3>
-            <p>End-to-end export logistics with documentation and global delivery management.</p>
+            <h4>Export Solutions</h4>
+            <p>Full export management including documentation, logistics, and international delivery coordination.</p>
         </div>
 
     </div>
@@ -240,19 +225,19 @@ button{
 
 <!-- ABOUT -->
 <section class="section about" id="about">
-    <h2 class="title">About Us</h2>
+    <h2 class="title">About Reylon PortaTrade</h2>
     <p style="color:#ccc;max-width:900px;">
-        Reylon PortaTrade is a global logistics and trading company specializing in clearing,
-        forwarding, import and export solutions. We provide reliable supply chain services worldwide.
+        Reylon PortaTrade is a global logistics and trading company specializing in clearing, forwarding,
+        and international trade solutions. We connect businesses to global markets with reliable,
+        efficient, and professional supply chain services.
     </p>
 </section>
 
-<!-- QUOTE -->
+<!-- QUOTE FORM -->
 <section class="section" id="quote">
-    <h2 class="title">Request Shipment / Quote</h2>
+    <h2 class="title">Request Shipment / Trade Inquiry</h2>
 
     <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
 
@@ -263,9 +248,9 @@ button{
             <option>Export Request</option>
         </select>
 
-        <textarea name="message" placeholder="Describe your cargo..."></textarea>
+        <textarea name="message" placeholder="Describe your cargo (vegetables, containers, goods, etc.)"></textarea>
 
-        <button type="submit">Send Request</button>
+        <button type="submit">Submit Request</button>
     </form>
 </section>
 
@@ -278,7 +263,7 @@ button{
 
 <!-- WHATSAPP -->
 <a class="whatsapp"
-href="https://wa.me/94768981600?text=Hello%20I%20need%20logistics%20services"
+href="https://wa.me/94768981600?text=Hello%20I%20need%20logistics%20support"
 target="_blank">
 WhatsApp
 </a>
