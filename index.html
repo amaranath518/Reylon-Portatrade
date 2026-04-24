@@ -20,7 +20,7 @@ body{
     color:#fff;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
     position:fixed;
     top:0;
@@ -39,22 +39,24 @@ nav{
 .brand{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 }
 
-/* LOGO IMAGE */
+/* LOGO FIX (IMPORTANT) */
 .brand img{
-    height:40px;
+    height:42px;
+    display:block;
 }
 
-/* TEXT LOGO fallback */
-#textlogo{
+/* TEXT ALWAYS READY BUT HIDDEN (NO FLICKER) */
+.brand span{
     display:none;
     color:#f5c542;
     font-weight:700;
     letter-spacing:1px;
 }
 
+/* LINKS */
 nav a{
     color:#ccc;
     margin-left:20px;
@@ -177,12 +179,11 @@ button{
 
     <div class="brand">
 
-        <!-- LOGO -->
-        <img src="logo.png"
-        onerror="this.style.display='none'; document.getElementById('textlogo').style.display='block';">
+        <!-- LOGO (STABLE VERSION) -->
+        <img src="logo.png" alt="Reylon PortaTrade Logo">
 
-        <!-- TEXT LOGO fallback -->
-        <div id="textlogo">REYLON PORTATRADE</div>
+        <!-- backup text (NOT USED unless you change manually) -->
+        <span>REYLON PORTATRADE</span>
 
     </div>
 
@@ -217,22 +218,22 @@ button{
 
         <div class="card">
             <h3>Sea Freight C&F</h3>
-            <p>Complete ocean freight with customs clearance and global logistics handling.</p>
+            <p>Complete ocean freight with customs clearance and global logistics coordination.</p>
         </div>
 
         <div class="card">
             <h3>Air Freight C&F</h3>
-            <p>Fast international air cargo with full forwarding support.</p>
+            <p>Fast international air cargo handling with full forwarding support.</p>
         </div>
 
         <div class="card">
             <h3>Import Services</h3>
-            <p>We source and import goods including vegetables, commodities, and industrial cargo.</p>
+            <p>We source and import goods globally including vegetables, commodities, and industrial products.</p>
         </div>
 
         <div class="card">
             <h3>Export Services</h3>
-            <p>End-to-end export logistics with documentation and global delivery.</p>
+            <p>Full export logistics with documentation and worldwide delivery management.</p>
         </div>
 
     </div>
@@ -242,8 +243,8 @@ button{
 <section class="section about" id="about">
     <h2 class="title">About Us</h2>
     <p style="color:#ccc;max-width:900px;">
-        Reylon PortaTrade is a global logistics and trading company specializing in clearing,
-        forwarding, import and export solutions. We provide reliable and professional supply chain services worldwide.
+        Reylon PortaTrade is a global logistics and trading company specializing in clearing, forwarding, import and export solutions.
+        We provide reliable international supply chain services.
     </p>
 </section>
 
@@ -263,7 +264,7 @@ button{
             <option>Export Request</option>
         </select>
 
-        <textarea name="message" placeholder="Describe your cargo (e.g. vegetables, containers, goods)..."></textarea>
+        <textarea name="message" placeholder="Describe your cargo..."></textarea>
 
         <button type="submit">Send Request</button>
     </form>
