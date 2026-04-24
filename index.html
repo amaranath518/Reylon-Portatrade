@@ -11,11 +11,13 @@ body {
     color:white;
 }
 
+/* HERO SECTION */
 .hero {
     height:100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');
     background-size:cover;
+    background-position:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -26,35 +28,55 @@ body {
 .hero h1 {
     color:gold;
     font-size:50px;
+    margin-bottom:10px;
 }
 
 .hero p {
     font-size:20px;
 }
 
+/* SERVICES */
 .services {
     background:#0b0f1a;
-    padding:50px;
+    padding:60px 20px;
     text-align:center;
+}
+
+.services h2 {
+    margin-bottom:30px;
 }
 
 .card {
     display:inline-block;
     background:#1c2b4a;
-    padding:20px;
-    margin:10px;
-    width:250px;
+    padding:25px;
+    margin:15px;
+    width:260px;
+    border-radius:10px;
+    transition:0.3s;
 }
 
+.card:hover {
+    transform:translateY(-10px);
+}
+
+/* CONTACT */
+.contact {
+    padding:50px;
+    text-align:center;
+}
+
+/* WHATSAPP BUTTON */
 .whatsapp {
     position:fixed;
     bottom:20px;
     right:20px;
     background:#25D366;
     color:white;
-    padding:15px;
-    border-radius:50%;
+    padding:15px 18px;
+    border-radius:50px;
     text-decoration:none;
+    font-weight:bold;
 }
 </style>
 
@@ -62,11 +84,13 @@ body {
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
     <h1>Reylon PortaTrade</h1>
     <p>Sea Freight | Air Cargo | Global Trading</p>
 </div>
 
+<!-- SERVICES -->
 <div class="services">
     <h2>Our Services</h2>
 
@@ -77,17 +101,27 @@ body {
 
     <div class="card">
         <h3>Air Cargo</h3>
-        <p>Fast international delivery</p>
+        <p>International Air Freight Clearing & Forwading</p>
     </div>
 
     <div class="card">
-        <h3>Import & Export</h3>
-        <p>Global sourcing solutions</p>
+        <h3>Global Trading    </h3>
+        <p>Imports & Exports Global trading</p>
     </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/94768981600" target="_blank">
-Chat
+<!-- CONTACT -->
+<div class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: reylonportatrade@gmail.com</p>
+    <p>Phone: +94 76 898 1600</p>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" 
+href="https://wa.me/94768981600?text=Hello%20I%20need%20shipping%20services" 
+target="_blank">
+Chat on WhatsApp
 </a>
 
 </body>
