@@ -6,42 +6,55 @@
 
 <style>
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial;
-    background: #0b0f1a;
-    color: white;
-}
-
-nav {
-    background: black;
-    padding: 15px;
-    text-align: center;
-}
-
-nav h1 {
-    color: gold;
+    color:white;
 }
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-.hero h2 {
-    color: gold;
+.hero h1 {
+    color:gold;
+    font-size:50px;
 }
 
-.section {
-    padding: 40px;
-    text-align: center;
+.hero p {
+    font-size:20px;
+}
+
+.services {
+    background:#0b0f1a;
+    padding:50px;
+    text-align:center;
 }
 
 .card {
-    background: #1c2b4a;
-    padding: 20px;
-    margin: 10px;
-    display: inline-block;
-    width: 250px;
+    display:inline-block;
+    background:#1c2b4a;
+    padding:20px;
+    margin:10px;
+    width:250px;
+}
+
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
 }
 </style>
 
@@ -49,38 +62,33 @@ nav h1 {
 
 <body>
 
-<nav>
-    <h1>Reylon PortaTrade</h1>
-</nav>
-
 <div class="hero">
-    <h2>Global Shipping & Trading</h2>
-    <p>Sea Freight | Air Cargo | Import & Export</p>
+    <h1>Reylon PortaTrade</h1>
+    <p>Sea Freight | Air Cargo | Global Trading</p>
 </div>
 
-<div class="section">
+<div class="services">
     <h2>Our Services</h2>
 
     <div class="card">
         <h3>Sea Freight</h3>
-        <p>Worldwide cargo shipping</p>
+        <p>Reliable container shipping worldwide</p>
     </div>
 
     <div class="card">
         <h3>Air Cargo</h3>
-        <p>Fast delivery by air</p>
+        <p>Fast international delivery</p>
     </div>
 
     <div class="card">
-        <h3>Global Trading</h3>
-        <p>Import & export solutions</p>
+        <h3>Import & Export</h3>
+        <p>Global sourcing solutions</p>
     </div>
 </div>
 
-<div class="section">
-    <h2>Contact</h2>
-    <p>Email: reylonportatrade@gmail.com</p>
-</div>
+<a class="whatsapp" href="https://wa.me/94XXXXXXXXX" target="_blank">
+Chat
+</a>
 
 </body>
 </html>
